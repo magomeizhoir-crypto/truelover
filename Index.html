@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Kehinde</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+<style>
+* {margin:0; padding:0; box-sizing:border-box;}
+body {
+  background: #000;
+  min-height: 100vh; display:flex; align-items:center; justify-content:center;
+  padding:20px; overflow:hidden; position:relative;
+}
+
+/* NO BACKGROUND BLOBS - CLEAN BLACK */
+
+.glass {
+  background: rgba(255,255,255,0.02); 
+  backdrop-filter: blur(30px) saturate(170%);
+  -webkit-backdrop-filter: blur(30px) saturate(170%);
+  border: 1.5px solid rgba(212,175,55,0.28); 
+  border-radius:32px;
+  padding:65px 45px 40px 45px; 
+  max-width:450px; text-align:center; position:relative; z-index:2;
+  box-shadow: 0 18px 50px rgba(0,0,0,1), inset 0 1px 0 rgba(255,255,255,0.03);
+}
+
+/* 𝒮𝒞𝑅𝐼𝒫𝒯 𝐹𝒪𝒩𝒯 𝒮𝒯𝒴𝐿𝐸 */
+h1 {
+  font-family: 'Dancing Script', cursive; 
+  font-size:46px; font-weight:700; margin-bottom:32px; 
+  color:#ffd700; letter-spacing:1.5px; 
+  text-shadow:0 0 28px rgba(255,215,0,0.85);
+}
+h1 span {color:#fff8dc; text-shadow:0 0 32px rgba(255,248,220,0.9);}
+p {
+  font-family: 'Dancing Script', cursive;
+  font-size:26px; line-height:1.9; color:#d4af37; margin:24px 0; font-weight:500;
+  text-shadow:0 0 14px rgba(212,175,55,0.65);
+}
+.signature {
+  font-family: 'Dancing Script', cursive;
+  margin-top:40px; color:#ffd700; font-size:24px; font-weight:600;
+  text-shadow:0 0 18px rgba(255,215,0,0.8);
+}
+.mafia-sign {
+  margin-top:28px; font-size:12px; color:#d4af37; letter-spacing:2.2px;
+  text-transform:uppercase; text-shadow:0 0 10px rgba(212,175,55,0.6);
+}
+
+.btn-wrap {margin-top:38px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap;}
+.btn {
+  font-family: 'Dancing Script', cursive;
+  padding:15px 34px; border-radius:12px; border:1.7px solid #d4af37; cursor:pointer;
+  font-size:20px; font-weight:600; background: rgba(212,175,55,0.08); color:#ffd700;
+  transition: all 0.3s ease; min-width:145px; 
+  backdrop-filter: blur(8px); text-shadow:0 0 12px rgba(255,215,0,0.65);
+}
+.btn:hover {
+  background: #d4af37; color:#000; 
+  box-shadow: 0 0 38px rgba(212,175,55,0.65);
+  text-shadow:none;
+}
+.hidden {display:none;}
+.fade {animation: fadeIn 1.5s ease;}
+@keyframes fadeIn {from{opacity:0; transform:translateY(28px)} to{opacity:1; transform:translateY(0)}}
+</style>
+</head>
+<body>
+
+<div class="glass fade" id="mainBox">
+  <h1>For <span>Kehinde</span></h1>
+  <p>
+    I’ll keep this direct because you deserve clarity.<br><br>
+    Every moment with you feels effortless. Your energy makes my world brighter.<br><br>
+    Would you like to be my girlfriend? your choice. Just more time with you.
+  </p>
+  <div class="signature" id="sig">— mafia_habibi</div>
+  <div class="mafia-sign">crafted by mafia_habibi</div>
+  
+  <div class="btn-wrap">
+    <button class="btn" onclick="yes()">Yes</button>
+    <button class="btn" onclick="no()">No, thank you</button>
+  </div>
+</div>
+
+<div class="glass fade hidden" id="yesBox">
+  <h1>Thank you <span>Kehinde</span></h1>
+  <p>
+    You just made my entire week.<br>
+    I’ll message you and we’ll plan something simple. No pressure.
+  </p>
+  <div class="signature">Looking forward</div>
+  <div class="mafia-sign">crafted by mafia_habibi</div>
+</div>
+
+<div class="glass fade hidden" id="noBox">
+  <h1>I respect that</h1>
+  <p>
+    Thank you for your honesty.<br>
+    I value you completely. Our friendship still means everything.
+  </p>
+  <div class="signature">With respect</div>
+  <div class="mafia-sign">crafted by mafia_habibi</div>
+</div>
+
+<script>
+const senderName = "mafia_habibi"; // Put his name here
+document.getElementById('sig').innerText = "— " + senderName;
+
+function yes() {
+  document.getElementById('mainBox').classList.add('hidden');
+  document.getElementById('yesBox').classList.remove('hidden');
+}
+function no() {
+  document.getElementById('mainBox').classList.add('hidden');
+  document.getElementById('noBox').classList.remove('hidden');
+}
+</script>
+</body>
+</html>
